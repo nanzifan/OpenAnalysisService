@@ -5,18 +5,25 @@
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>jsp/index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-<servlet>
-	<description></description>
-	<display-name>TestServlet</display-name>
-	<servlet-name>TestServlet</servlet-name>
-	<servlet-class>gov.llnl.oas.servlet.TestServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>TestServlet</servlet-name>
-	<url-pattern>/TestServlet</url-pattern>
-</servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestServlet</display-name>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>gov.llnl.oas.servlet.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CallGraphDockerServlet</display-name>
+    <servlet-name>CallGraphDockerServlet</servlet-name>
+    <servlet-class>gov.llnl.oas.servlet.CallGraphDockerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CallGraphDockerServlet</servlet-name>
+    <url-pattern>/CallGraphDockerServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

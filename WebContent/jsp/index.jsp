@@ -16,7 +16,7 @@ font-style: 12px;
      method: get方式 - 明文提交同时提数据大小限制在128K     www.baidu.com/xxx.html?keyword=xxxxxx&descript=xxxxxx
              post方式 -  密文提交同时提交数据大小无限制
 -->
-<form id="form" method="post" action="/OpenAnalysisService/TestServlet">
+<form id="test_input" method="post" action="/OpenAnalysisService/TestServlet">
 	<table>
 		<tr>
 			<td>input:</td>
@@ -25,13 +25,12 @@ font-style: 12px;
 		</tr>
 	</table>
 </form>
-<%-- <form id="form" method="post" action="/OpenAnalysisService/TestServlet">
+<form id="services" method="post" action="/OpenAnalysisService/CallGraphDockerServlet">
 	<table>
 		<tr>
-			<td>result:</td>
-			<td><input <a>${txtInput}</a> ></td>
+			<td><input type="submit" name="call_graph" id="call_graph" onClick="/OpenAnalysisService/CallGraphServlet" value="Call Graph"></td>
 		</tr>
 	</table>
-</form> --%>
+</form>
 </body>
 </html>
