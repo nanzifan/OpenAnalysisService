@@ -9,19 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import gov.llnl.oas.docker_deploy.CallGraphDockerDeploy;
+import gov.llnl.oas.docker_ops.CallGraphDockerDeploy;
 
 /**
- * Servlet implementation class CallGraphDocker
+ * Servlet implementation class CallGraphDockerExecuteServlet
  */
-@WebServlet(description = "deploy call graph docker", urlPatterns = { "/CallGraphDocker" })
-public class CallGraphDockerServlet extends HttpServlet {
+@WebServlet("/CallGraphDockerExecuteServlet")
+public class CallGraphDockerRunServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CallGraphDockerServlet() {
+    public CallGraphDockerRunServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,7 +40,9 @@ public class CallGraphDockerServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("start deploying call graph docker");
+request.setCharacterEncoding("UTF-8");
+		
+		System.out.println("start executing call graph docker");
 		
 		String path = getServletContext().getRealPath("/BashScript");
 		
@@ -48,14 +50,16 @@ public class CallGraphDockerServlet extends HttpServlet {
 		System.out.println("Current path is: " + path);
 		
 		CallGraphDockerDeploy callGraphDeploy = new CallGraphDockerDeploy();
-//		String result = callGraphDeploy.run_script("E:\\Code\\JavaCode\\OpenAnalysisService\\BashScript", "test.sh");
-		String result = callGraphDeploy.run_script(path, "DeployDockerCallGraph.sh");
-
+		String value = callGraphDeploy.run_script(path, "DeployDockerCallGraph.sh");
+		
+//		String result = "test";
+		String result = value.replace("\n", "");
+		
 		System.out.println("Running result is: "+ result);
 		
 		request.setAttribute("result", result);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/result_script_test.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/call_graph_docker_deploy.jsp");
 		dispatcher.forward(request, response);
 		
 		System.out.println("call graph docker deployed");

@@ -25,10 +25,10 @@ font-style: 12px;
 		</tr>
 	</table>
 </form>
-<form id="services" method="post" action="/OpenAnalysisService/CallGraphDockerServlet">
+<form id="services" method="post" action="/OpenAnalysisService/CallGraphDockerDeployServlet">
 	<table>
 		<tr>
-			<td><input type="submit" name="call_graph" id="call_graph" onClick="/OpenAnalysisService/CallGraphServlet" value="Call Graph"></td>
+			<td><input type="submit" name="call_graph" id="call_graph"  value="Call Graph"></td>
 		</tr>
 	</table>
 </form>

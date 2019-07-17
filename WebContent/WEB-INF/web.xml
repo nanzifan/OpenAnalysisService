@@ -18,12 +18,32 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>CallGraphDockerServlet</display-name>
-    <servlet-name>CallGraphDockerServlet</servlet-name>
-    <servlet-class>gov.llnl.oas.servlet.CallGraphDockerServlet</servlet-class>
+    <display-name>CallGraphDockerDeployServlet</display-name>
+    <servlet-name>CallGraphDockerDeployServlet</servlet-name>
+    <servlet-class>gov.llnl.oas.servlet.CallGraphDockerDeployServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CallGraphDockerServlet</servlet-name>
-    <url-pattern>/CallGraphDockerServlet</url-pattern>
+    <servlet-name>CallGraphDockerDeployServlet</servlet-name>
+    <url-pattern>/CallGraphDockerDeployServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CallGraphDockerRemoveServlet</display-name>
+    <servlet-name>CallGraphDockerRemoveServlet</servlet-name>
+    <servlet-class>gov.llnl.oas.servlet.CallGraphDockerRemoveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CallGraphDockerRemoveServlet</servlet-name>
+    <url-pattern>/CallGraphDockerRemoveServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CallGraphDockerRunServlet</display-name>
+    <servlet-name>CallGraphDockerRunServlet</servlet-name>
+    <servlet-class>gov.llnl.oas.servlet.CallGraphDockerRunServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CallGraphDockerRunServlet</servlet-name>
+    <url-pattern>/CallGraphDockerRunServlet</url-pattern>
   </servlet-mapping>
 </web-app>
