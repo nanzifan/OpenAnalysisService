@@ -59,7 +59,7 @@ request.setCharacterEncoding("UTF-8");
 		
 		request.setAttribute("result", result);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/call_graph_docker_deploy.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/call_graph_docker_execute.jsp");
 		dispatcher.forward(request, response);
 		
 		System.out.println("call graph docker deployed");
