@@ -93,7 +93,7 @@ public String execute(String path, String scriptName, String parameter) throws I
 				System.out.println("Chmod Success!");
 			}
 				
-			this.processBuilder.command("/bin/bash", path + '/' + scriptName, parameter);
+			this.processBuilder.command("/bin/bash", path + '/' + scriptName, parameter, path);
 //			this.processBuilder.command("/bin/bash", "/home/znan/apache-tomcat-9.0.22/webapps/OpenAnalysisService/BashScript/DeployDockerCallGraph.sh");
 
 			

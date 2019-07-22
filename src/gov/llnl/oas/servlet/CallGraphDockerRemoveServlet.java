@@ -62,7 +62,7 @@ public class CallGraphDockerRemoveServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/index.jsp");
 		dispatcher.forward(request, response);
 		
-		System.out.println("call graph docker deployed");
+		System.out.println("call graph docker deleted");
 	}
 
 }
