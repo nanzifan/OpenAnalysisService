@@ -49,7 +49,8 @@ font-style: 12px;
 <!-- <input type="button" name="t2" id="t3" onClick="javascript:test()" value="t2"> -->
 
 
-<form id="form" method="post" action="/OpenAnalysisService/CallGraphDockerExecuteServlet">
+<form id="form" method="post" action="/OpenAnalysisService/CallGraphDockerRunServlet">
+	<input type="hidden"  name="docker_id" id="docker_id" value="${requestScope.result}">
 	<table>
 		<tr>
 			<td>Argument: </td>
