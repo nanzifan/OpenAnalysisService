@@ -29,6 +29,7 @@ ${requestScope.result}
 
 <button name="main_page" id="main_page" onClick="window.location.href = 'jsp/index.jsp';">main page</button>
 <button name="delete_docker" id="delete_docker" onClick="javascript:removeDockerByID();">Delete docker</button>
+<input type="hidden"  name="docker_id" id="docker_id" value="${requestScope.dockerID}">
 
 
 <!-- <table>
